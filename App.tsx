@@ -8,6 +8,7 @@ import {
 import Loading from "./src/components/Loading";
 import Signin from "./src/screens/Signin";
 import { THEME } from "./src/styles/themes";
+import { AuthContextProvider } from './src/contexts/AuthContext';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -18,12 +19,14 @@ export default function App() {
 
   return (
     <NativeBaseProvider theme={THEME}>
+      <AuthContextProvider>
       <StatusBar
         barStyle="light-content"
         backgroundColor="transparent"
         translucent
       />
       {fontsLoaded ? <Signin /> : <Loading />}
+      </AuthContextProvider>
     </NativeBaseProvider>
   );
 }
