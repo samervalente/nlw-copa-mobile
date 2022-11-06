@@ -5,10 +5,11 @@ import {
   Roboto_500Medium,
   Roboto_700Bold,
 } from "@expo-google-fonts/roboto";
+import { THEME } from "./src/styles/themes";
 import Loading from "./src/components/Loading";
 import Signin from "./src/screens/Signin";
-import { THEME } from "./src/styles/themes";
 import { AuthContextProvider } from './src/contexts/AuthContext';
+import { CreatePool } from './src/screens/CreatePool';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -25,7 +26,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      {fontsLoaded ? <Signin /> : <Loading />}
+      {fontsLoaded ? <Signin /> : <CreatePool />}
       </AuthContextProvider>
     </NativeBaseProvider>
   );

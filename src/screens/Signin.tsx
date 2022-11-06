@@ -5,7 +5,7 @@ import { Fontisto } from "@expo/vector-icons";
 import { useAuth } from "../hooks/useAuth";
 
 export default function Signin() {
-  const {user, signIn} = useAuth()
+  const {userData, signIn} = useAuth()
 
   return (
     <Center flex={1} bg="gray.900" p={7}>
