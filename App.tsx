@@ -9,7 +9,8 @@ import { THEME } from "./src/styles/themes";
 import Loading from "./src/components/Loading";
 import Signin from "./src/screens/Signin";
 import { AuthContextProvider } from './src/contexts/AuthContext';
-import { CreatePool } from './src/screens/CreatePool';
+import CreatePool from './src/screens/CreatePool';
+import FindPool from './src/screens/FindPool';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
